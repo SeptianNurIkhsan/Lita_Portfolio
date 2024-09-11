@@ -1,0 +1,259 @@
+/* Start Jumbotron Styles */
+.jumbotron 
+{
+  background: url(Foto/Background.jpg);
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.profile-img::before 
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+  z-index: 1;
+}
+
+.profile-img .container 
+{
+  z-index: 2; /* Text on top */
+}
+
+.profile-img img 
+{
+  transition: transform 0.5s ease-in-out;
+}
+
+.profile-img img:hover 
+{
+  transform: scale(1.1); /* Zoom-in effect */
+}
+
+h1, p 
+{
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp 
+{
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* End Jumbotron Styles*/
+
+/* Start About Styles */
+#tentang 
+{
+  height: 100vh;
+  position:static;
+  background-color: #19386d;
+}
+
+#tentang .row 
+{
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+#tentang .img-fluid 
+{
+  max-width: 300px; 
+  height: auto; 
+}
+
+.img-about .container 
+{
+  z-index: 2; /* Text on top */
+}
+
+.img-about img 
+{
+  transition: transform 0.5s ease-in-out;
+}
+
+.img-about img:hover 
+{
+  transform: scale(1.1); /* Zoom-in effect */
+}
+
+#tentang p {
+  color: #f9f9e9;
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+
+#tentang p:hover {
+  transform: translateY(-10px); /* Move the paragraph slightly to the right */
+}
+/* End About Styles */
+
+
+/* Start Experiences Styles */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+/* Garis timeline di tengah */
+.timeline:before 
+{
+  content: '';
+  position: absolute;
+  left: 50%; /* Pusat garis tepat di tengah */
+  top: 0;
+  bottom: 0;
+  width: 5px; /* Ketebalan garis */
+  background: #f9f9e9; /* Warna garis */
+  transform: translateX(-50%);
+}
+
+.timeline-item 
+{
+  position: relative;
+  margin: 40px 0;
+  width: 50%;
+}
+
+.timeline-item h4 
+{
+  font-size: 1,2rem;
+  margin-bottom: 10px;
+}
+
+.timeline-item p 
+{
+  margin: 0;
+}
+
+.timeline-item:nth-child(odd) /* Left side (odd) */
+{
+  left: 0;
+  text-align: right;
+  padding-right: 100px; /* Ensure distance from the centerline */
+}
+
+.timeline-item:nth-child(odd):before 
+{
+  left: 100%;
+  margin-left: -6px;
+}
+
+.timeline-item:nth-child(even) /* Right side (even) */
+{
+  left: 50%;
+  text-align: left;
+  padding-left: 100px; /* Ensure distance from the centerline */
+}
+
+.timeline-item:nth-child(even):before 
+{
+  left: 0;
+  margin-left: -6px;
+}
+
+.timeline-item:before /* Common pointer style */
+{
+  content: '';
+  position: absolute;
+  top: 30px; /* Align pointer with the title */
+  width: 12px;
+  height: 12px;
+  background: #19386d;
+  border-radius: 50%;
+  border: 2px solid #345088;
+}
+/* End Experiences Styles */
+
+/* Start Achievements Styles */
+#pencapaian 
+{
+  background-color: #19386d;
+  padding: 50px 0;
+}
+
+.pencapaian-box 
+{
+  position: relative;
+  background-color: #19386d;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.5s;
+}
+
+.pencapaian-img 
+{
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+
+.overlay /* Overlay styling */
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.pencapaian-box:hover .overlay 
+{
+  opacity: 1;
+}
+
+.overlay-text 
+{
+  color: #f9f9e9;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.detail-button 
+{
+  color: #f9f9e9;
+  text-decoration: none;
+}
+
+.detail-button:hover 
+{
+  color: #f9f9e9;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) /* Responsive adjustments */
+{
+  .pencapaian-box {
+    margin-bottom: 20px;
+  }
+}
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+/* End Achievements Styles */
+
+/* Start Footer Styles */
+.footer {
+  background-color: #345088;
+}
+/* End Footer Styles */
