@@ -1,0 +1,204 @@
+.jumbotron {
+  background: url(Foto/Background.jpg);
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#tentang {
+  height: 100vh;
+  position:static;
+  background-color: #19386d;
+}
+
+#tentang .row {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+#tentang .img-fluid {
+  max-width: 300px; 
+  height: auto; 
+  
+}
+
+  #tentang h2 {
+    font-size: 2.5rem;
+  }
+
+  #tentang p {
+    font-size: 1.2rem;
+    color: #f9f9e9;
+  }
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+/* Garis timeline di tengah */
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 50%; /* Pusat garis tepat di tengah */
+  top: 0;
+  bottom: 0;
+  width: 5px; /* Ketebalan garis */
+  background: #f9f9e9; /* Warna garis */
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin: 40px 0;
+  width: 50%;
+}
+
+.timeline-item h4 {
+  font-size: 1,2rem;
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  margin: 0;
+}
+
+/* Left side (odd) */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+  padding-right: 100px; /* Ensure distance from the centerline */
+}
+
+.timeline-item:nth-child(odd):before {
+  left: 100%;
+  margin-left: -6px;
+}
+
+/* Right side (even) */
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+  padding-left: 100px; /* Ensure distance from the centerline */
+}
+
+.timeline-item:nth-child(even):before {
+  left: 0;
+  margin-left: -6px;
+}
+
+/* Common pointer style */
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 30px; /* Align pointer with the title */
+  width: 12px;
+  height: 12px;
+  background: #19386d;
+  border-radius: 50%;
+  border: 2px solid #345088;
+}
+
+/* pencapaian section */
+#pencapaian {
+  background-color: #19386d;
+}
+
+.pencapaian-box {
+  position: relative;
+  background-color: #345088;
+  border-radius: 10px;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.pencapaian-box::before {
+  content: "Certificate";
+  position: absolute;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+  top: 30px;
+  left: 12%;
+  transform: translate3d(0, 0, 50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pencapaian-box:hover::before {
+  opacity: 0.4;
+}
+
+.pencapaian-box::after {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  top: 350px;
+  left: 12%;
+  transform: translate3d(0, 0, 50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pencapaian-box:hover::after {
+  opacity: 0.4;
+}
+
+.pencapaian-img {
+  top: 10%;
+  left: 10%;
+  transform: translate3d(18%, 70%, 150px);
+  max-width: 300px;
+  transition: 0.5s;
+}
+
+.pencapaian-box:hover .pencapaian-img {
+  transform: translate3d(18%, 70%, 100px) rotate(5deg) scale(1.2);
+}
+
+.detail-button {
+  background-color: #19386d;
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+  transform: translate3d(0, 0, 30px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.pencapaian-box:hover .detail-button {
+  opacity: 1;
+  bottom: 10px;
+  transform: translate3d(0, 0, 30px);
+}
+
+/* #galeri {
+  background-color: seashell;
+} 
+
+.galeri-img {
+  width: 100%;
+}
+
+#galeri .row > * {
+  padding: 0;
+}*/
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* #hubungi {
+  height: 100vh;
+  background-color: #19386d;
+} */
+
+.footer {
+  background-color: #345088;
+}
